@@ -95,7 +95,7 @@ curl -N  http://localhost:18000/v1/chat/completions \
    ]
 }'
 ```
-```json
+```
 data: {"duration":390,"text":"6"}
 
 data: {"duration":27,"text":","}
