@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>fr.inzh.llm</groupId>
+        <artifactId>inzh-llm-service</artifactId>
+        <version>0.1</version>
+    </parent>
+    <licenses>
+        <license>
+            <name>Creative Commons Attribution 4.0 International Public License</name>
+            <url>https://creativecommons.org/licenses/by/4.0/legalcode.txt</url>
+        </license>
+    </licenses>
+    <organization>
+        <name>[InZH] Studio</name>
+        <url>https://www.inzh.fr</url>
+    </organization>
+    <inceptionYear>2011</inceptionYear>
+    <developers>
+        <developer>
+            <name>Jean-Raffi Nazareth</name>
+            <email>jr-nazareth@inzh.fr</email>
+            <organization>[InZH] Studio</organization>
+            <organizationUrl>https://www.inzh.fr</organizationUrl>
+            <roles>
+                <role>owner</role>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+    <dependencies>
+        <dependency>
+            <groupId>de.kherud</groupId>
+            <artifactId>llama</artifactId>
+            <version>3.0.1-inzh</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.13</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.16.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.16.2</version>
+        </dependency>
+    </dependencies>
+    <artifactId>inzh-llm-api-service</artifactId>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+</project>
