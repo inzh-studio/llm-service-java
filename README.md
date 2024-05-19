@@ -41,6 +41,14 @@ Download last [release](https://github.com/inzh-studio/llm-service-java/releases
   start.bat  --modelPath ./models  --open Meta-Llama-3-8B-Instruct.Q8_0
   ```
 
+- Avoid VRAM capacity overrun errors
+
+   If your configuration has a low amount of VRAM, you can choose the number of layers that will be processed by the GPU, to avoid having "Out Of Memory" errors
+
+  ```shell
+  start.bat  --modelPath ./models  --open Meta-Llama-3-8B-Instruct.Q8_0 --nGpuLayers 8
+  ```
+
 ## Model list
 
 Bellow, tested GGUF models with ressource consumtion (RAM and VRAM).

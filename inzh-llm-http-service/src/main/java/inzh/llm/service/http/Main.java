@@ -1,6 +1,7 @@
 package inzh.llm.service.http;
 
 import inzh.llm.service.Configuration;
+import inzh.llm.service.ModelConfiguration;
 import inzh.llm.service.gguf.GGUFFile;
 import inzh.llm.service.http.v1.ServletContextHandlerBuilder;
 import java.io.IOException;
@@ -26,6 +27,8 @@ public class Main {
         String serverHost = "127.0.0.1";
         Integer serverPort = 18000;
         String[] openOnStart = null;
+        
+        Integer ngl = null;
 
         for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
@@ -56,6 +59,11 @@ public class Main {
                 case "--open":
                     openOnStart = args[i + 1].split(",");
                     break;
+                    
+                case "--nGpuLayers":    
+                case "-ngl":
+                    ngl = Integer.valueOf(args[i + 1]);
+                    break;
             }
         }
 
@@ -68,7 +76,14 @@ public class Main {
                 if(file == null){
                     throw new IOException("No model found: " + model);
                 }
-                a.getFileService().open(file, null);
+                
+                ModelConfiguration mConfiguration = null;
+                if(ngl != null){
+                    mConfiguration = ModelConfiguration.createDefault();
+                    mConfiguration.setNGpuLayers(ngl);
+                }
+                
+                a.getFileService().open(file, mConfiguration);
             }
         }else{
             a.getFileService().get();
