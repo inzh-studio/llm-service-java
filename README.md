@@ -1,5 +1,5 @@
 ![Java 17+](https://img.shields.io/badge/Java-17%2B-informational)
-![llama.cpp b2927](https://img.shields.io/badge/llama.cpp-%23b2927-informational)
+![llama.cpp b2930](https://img.shields.io/badge/llama.cpp-%23b2930-informational)
 ![java-llama.cpp v3.0.1-inzh](https://img.shields.io/badge/java--llama.cpp-v3.0.1--inzh-informational)
 
 # Java LLM service
