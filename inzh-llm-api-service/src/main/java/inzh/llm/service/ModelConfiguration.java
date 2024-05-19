@@ -466,7 +466,7 @@ public class ModelConfiguration {
         return configuration
                 .setNCtx(8096)
                 .setEmbedding(true)
-                .setNThreads(1)
+                .setNThreads(Runtime.getRuntime().availableProcessors())
                 .setNGpuLayers(999);
     }
     
