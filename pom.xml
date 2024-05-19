@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>fr.inzh.llm</groupId>
     <artifactId>inzh-llm-service</artifactId>
-    <version>0.1</version>
+    <version>0.2</version>
     <packaging>pom</packaging>
     <modules>
         <module>inzh-llm-api-service</module>
