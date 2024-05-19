@@ -49,6 +49,7 @@ Bellow, tested GGUF models with ressource consumtion (RAM and VRAM).
 | ------------- | ------------- |  
 | [Meta-Llama-3-8B-Instruct.Q8_0](https://huggingface.co/QuantFactory/Meta-Llama-3-8B-Instruct-GGUF/resolve/main/Meta-Llama-3-8B-Instruct.Q8_0.gguf)  | ~ 9.6 Go |
 | [mistral-7b-instruct-v0.2.Q5_K_M](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF/resolve/main/mistral-7b-instruct-v0.2.Q5_0.gguf) | ~ 5.3 Go |
+| [vigogne-2-7b-instruct.Q8_0](https://huggingface.co/TheBloke/Vigogne-2-7B-Instruct-GGUF/resolve/main/vigogne-2-7b-instruct.Q8_0.gguf) | ~ 11.6 Go |
 
 ## REST Service usage
 
