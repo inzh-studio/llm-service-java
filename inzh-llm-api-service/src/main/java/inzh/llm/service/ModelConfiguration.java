@@ -6,6 +6,7 @@ import de.kherud.llama.args.LogFormat;
 import de.kherud.llama.args.NumaStrategy;
 import de.kherud.llama.args.PoolingType;
 import de.kherud.llama.args.RopeScalingType;
+import inzh.llm.service.gguf.GGUFFile;
 
 /**
  *
@@ -301,6 +302,15 @@ public class ModelConfiguration {
         this.logFormat = logFormat;
         return this;
     }
+    
+    public ModelConfiguration updateFrom(GGUFFile file) {
+        if(this.nCtx == null){
+            if(file.getHeader().getMetadatas().containsKey("llama.context_length")){
+                setNCtx((Integer) file.getHeader().getMetadatas().get("llama.context_length"));
+            }
+        }
+        return this;
+    }
 
     public ModelParameters toParameters() {
         ModelParameters p = new ModelParameters();
@@ -464,7 +474,6 @@ public class ModelConfiguration {
     
     public static ModelConfiguration setDefault(ModelConfiguration configuration){
         return configuration
-                .setNCtx(8096)
                 .setEmbedding(true)
                 .setNThreads(Runtime.getRuntime().availableProcessors())
                 .setNGpuLayers(999);

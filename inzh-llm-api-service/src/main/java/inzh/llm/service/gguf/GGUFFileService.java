@@ -87,6 +87,7 @@ public class GGUFFileService {
         if(configuration == null){
             configuration = ModelConfiguration.createDefault();
         }
+        configuration.updateFrom(file);
         configuration.setModelFilePath(path.toString());
 
         LlamaModel m = new LlamaModel(configuration.toParameters(this.configuration));
