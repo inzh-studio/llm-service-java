@@ -4,7 +4,7 @@
     <parent>
         <groupId>fr.inzh.llm</groupId>
         <artifactId>inzh-llm-service</artifactId>
-        <version>0.2</version>
+        <version>0.3-dev</version>
     </parent>
     <licenses>
         <license>
